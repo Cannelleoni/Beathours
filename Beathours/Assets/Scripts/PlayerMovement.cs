@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.MovePosition(transform.position + InputManager.mainJoyStick() * Time.deltaTime * speed);
         } 
+
+        if(transform.position.y < -2f)
+        {
+            transform.position = new Vector3(-3.5f, .25f, -2.5f);
+        }
     }
 
 
