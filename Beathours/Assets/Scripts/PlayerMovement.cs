@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody rb;
     [SerializeField] float speed;
 
+    [SerializeField] GameObject tower, newParent;
+
 
     private void Update()
     {
@@ -20,8 +22,15 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(-3.5f, .25f, -2.5f);
         }
+
+        
     }
 
+    public void changeParent()
+    {
+        tower.transform.SetParent(newParent.transform);
+        tower.transform.position = new Vector3(transform.position.x, transform.position.y + 1.25f, transform.position.z);
+    }
 
     //classObject[] coArr = new classObject[400];
 
