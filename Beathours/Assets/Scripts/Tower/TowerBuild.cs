@@ -31,9 +31,6 @@ public class TowerBuild : MonoBehaviour
         lastVertical = InputManager.mainVertical();
         playerPosition = new Vector3(player.transform.position.x, 0, player.transform.position.z);
 
-
-        if (lastHorizontal == 0) {
-
             // above
             if (lastVertical < 0) {
 
@@ -65,8 +62,6 @@ public class TowerBuild : MonoBehaviour
 
                 }
             }
-        }
-        else if (lastVertical == 0) {
 
             // right
             if (lastHorizontal > 0) {
@@ -100,6 +95,5 @@ public class TowerBuild : MonoBehaviour
 
                 }
             }
-        }
     }
 }
