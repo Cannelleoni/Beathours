@@ -9,7 +9,7 @@ public class TowerBuild : MonoBehaviour
     [SerializeField] GameObject gridTile, gridTileRed;
     float lastHorizontal, lastVertical;
     GameObject currentFocusedTile;
-    Material material;
+    Material green, red;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,8 @@ public class TowerBuild : MonoBehaviour
         lastHorizontal = 0;
         lastVertical = 0;
         currentFocusedTile = Instantiate(gridTile, new Vector3((int)player.transform.position.x, 0, (int)player.transform.position.z), Quaternion.identity);
-        material = gridTile.GetComponent<Renderer>().material;
+        green = Resources.Load<Material>("Green");
+        red = Resources.Load<Material>("Red");
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class TowerBuild : MonoBehaviour
                 // green
                 if (BoardGrid.GetGridTileValue((int)Mathf.Round(playerPosition.x), (int)Mathf.Ceil(playerPosition.z)) == 0) {
 
-                material.color = Color.green;
+                
                 }
 
                 // red
