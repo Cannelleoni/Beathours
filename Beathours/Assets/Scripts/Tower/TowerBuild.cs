@@ -6,7 +6,7 @@ public class TowerBuild : MonoBehaviour
 {
     [SerializeField] GameObject player;
     Vector3 playerPosition;
-    [SerializeField] GameObject gridTileGreen, gridTileRed;
+    [SerializeField] GameObject gridTile, gridTileRed;
     float lastHorizontal, lastVertical;
     GameObject currentFocusedTile;
     Material material;
@@ -16,7 +16,8 @@ public class TowerBuild : MonoBehaviour
     {
         lastHorizontal = 0;
         lastVertical = 0;
-        currentFocusedTile = Instantiate(gridTileGreen, new Vector3((int)player.transform.position.x, 0, (int)player.transform.position.z), Quaternion.identity);
+        currentFocusedTile = Instantiate(gridTile, new Vector3((int)player.transform.position.x, 0, (int)player.transform.position.z), Quaternion.identity);
+        material = gridTile.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -39,6 +40,7 @@ public class TowerBuild : MonoBehaviour
                 // green
                 if (BoardGrid.GetGridTileValue((int)Mathf.Round(playerPosition.x), (int)Mathf.Ceil(playerPosition.z)) == 0) {
 
+                material.color = Color.green;
                 }
 
                 // red

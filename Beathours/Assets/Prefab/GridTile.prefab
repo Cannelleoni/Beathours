@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 6227879982987565592}
   - component: {fileID: 1044753820190065517}
   - component: {fileID: 5909508751086069540}
-  - component: {fileID: -7409701471446320663}
-  - component: {fileID: -7775609762842976450}
   m_Layer: 0
   m_Name: GridTile
   m_TagString: Untagged
@@ -60,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5ef90e842d1f154584a23aea0e73178, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,32 +92,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7409701471446320663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5798702401582755996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f049e31b0f0b794188a3e4d1fe9e526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: f5ef90e842d1f154584a23aea0e73178, type: 2}
-  - {fileID: 2100000, guid: a9e0740d1fa35d94e82e14dc2c9ee2f9, type: 2}
-  currentMaterial: 0
---- !u!114 &-7775609762842976450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5798702401582755996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a1891684a8b17d48a2fb9771422bc63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
